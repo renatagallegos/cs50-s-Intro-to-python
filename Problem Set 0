@@ -1,0 +1,45 @@
+# Since each assignment was so short, I've compiled them all into one file
+# I'll avoid doing so starting with problem set 1
+
+# Indoor Voice
+user_input = input("What would you like changed? ")
+print(user_input.lower())
+
+# Playback Speed
+user_input = input("What would you like slowed down? ")
+print(user_input.replace(" ", "..."))
+
+# Making Faces
+def convert(input_change):
+    input_change = input_change.replace(":)", "🙂")
+    input_change = input_change.replace(":(", "🙁")
+    return(input_change)
+
+def main():
+    user_input = input("What would you like changed? " )
+    print(convert(user_input))
+
+main()
+
+# Einstein
+mass = int(input("What is the mass (in kg) of your object? "))
+print("E: ", mass*300000000**2)
+
+# Tip Calculator
+def main():
+    dollars = dollars_to_float(input("How much was the meal? "))
+    percent = percent_to_float(input("What percentage would you like to tip? "))
+    tip = dollars * percent
+    print(f"Leave ${tip:.2f}")
+
+
+def dollars_to_float(d):
+    d = float(d[1:len(d)])
+    return(d)
+
+
+def percent_to_float(p):
+    p = float(p[0:len(p)-1])
+    return(p/100)
+
+main()
