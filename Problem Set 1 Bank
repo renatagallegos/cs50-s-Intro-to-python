@@ -1,0 +1,13 @@
+# .strip() takes care of any blank spaces
+user_input = input("Greeting: ").strip()
+# turn string into a list of words
+user_input = user_input.split()
+
+# if the first element in the list is hello
+if "hello" in user_input[0].casefold():
+    print("$0")
+# else if the first letter of the first element in the list is h
+elif user_input[0][0].casefold() == "h":
+    print("$20")
+else:
+    print("$100")
